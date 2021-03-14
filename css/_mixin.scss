@@ -1,0 +1,93 @@
+
+@mixin pc {
+  @media (max-width:($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width:(776px)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width:(576px)) {
+    @content;
+  }
+}
+
+/////////ハンバーガーメニュー/////////
+@mixin ham{
+
+  .ham {
+    position: relative;
+    width: 30px;
+    height: 25px;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+
+  .ham_line {
+    position: absolute;
+    left: 10px;
+    width: 25px;
+    height: 0.5px;
+    background-color: #333333;
+  }
+
+  .ham_line1 {
+    top: 5px;
+  }
+
+  .ham_line2 {
+    top: 12px;
+    transition: all 0.5s;
+  }
+
+  &:hover .ham_line2 {
+    transform: translateX(-10px);
+  }
+
+  .ham_line3 {
+    top: 19px;
+    height: 1px;
+  }
+}
+
+@mixin store{
+  article {
+    margin:0 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .store-image-wrap {
+      margin-bottom: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .top-store-text {
+      display: flex;
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding: 5px;
+
+      .top-store-text-item1 {
+        width: 30%;
+
+      }
+
+      .top-store-text-item2 {
+        width: 65%;
+
+      }
+    }
+  }
+
+
+}
