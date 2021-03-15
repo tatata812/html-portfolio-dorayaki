@@ -67,7 +67,7 @@ $(function () {
   $(window).scroll(function () {
     const scroll = $(window).scrollTop();
     const windowHeight = $(window).height();
-    $('.top-history-left,.hade-in,.top-dorayaki-image,.top-dorayaki-text, .top-life-text,.top-life-image').each(function () {
+    $('.top-about-left,.hade-in,.top-lunch-image,.top-lunch-text, .top-dinner-text,.top-dinner-image').each(function () {
       const elemPos = $(this).offset().top;
       if (scroll > elemPos - windowHeight + 100) {
         $(this).addClass('active');
@@ -82,9 +82,9 @@ $(function () {
   $(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 400) {
-        $('.header-top').addClass('fixed');
+        $('.header-fixed').addClass('fixed');
       } else {
-        $('.header-top').removeClass('fixed');
+        $('.header-fixed').removeClass('fixed');
       }
     });
   });

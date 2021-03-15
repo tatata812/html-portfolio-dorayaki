@@ -81,6 +81,14 @@ li {
   }
 }
 
+.sub-page {
+  visibility: visible;
+  position: relative;
+  transform: translateY(0);
+
+
+}
+
 .header-side {
   position: fixed;
   top: 0;
@@ -195,6 +203,11 @@ li {
   }
 }
 
+////////sub-page/////////
+.sub-page {
+  position:relative;
+}
+
 ///////////top-visual///////////
 .top-visual {
 
@@ -216,8 +229,8 @@ li {
         width: 100%;
         height: 88vh;
         object-fit: cover;
-        filter: saturate(200%);        
-    
+        filter: saturate(200%);
+
 
         .slick-slide img {
           transform: scale(1.2);
@@ -317,68 +330,10 @@ li {
 
 
 
-///////////top-aside////////////
 
-// .top-aside {
-//   margin-bottom: 80px;
+///////////top-about///////////
 
-//   @include tab {
-//     margin-bottom: 0;
-//   }
-
-//   .top-aside-slider {
-//     width: 100%;
-//     max-width: 1140px;
-//     margin: 0 auto;
-
-//     @include tab {
-//       display: none;
-//     }
-
-//     a {
-//       display: inline-block;
-//       max-width: 370px;
-//       margin: 0 10px;
-
-//       img {
-//         width: 100%;
-//         height: auto;
-//       }
-//     }
-//   }
-
-//   .top-aside-flex-wrap {
-//     display: none;
-
-//     @include tab {
-//       display: block;
-//     }
-
-//     .top-aside-flex {
-//       display: flex;
-//       flex-wrap: wrap;
-
-//       a {
-//         display: inline-block;
-//         width: 50%;
-
-//         img {
-//           width: 100%;
-//           height: auto;
-//           padding: 30px;
-
-//           @include sp {
-//             padding: 5px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-///////////top-history///////////
-
-.top-history {
+.top-about {
   display: flex;
   justify-content: space-between;
   height: 496px;
@@ -386,20 +341,17 @@ li {
 
   @include tab {
     margin-bottom: 48px;
-  }
-
-  @include tab {
     flex-direction: column;
     height: auto;
   }
 
-  .top-history-left {
+
+  .top-about-left {
     position: relative;
     width: 42%;
     background: rgba(0, 0, 0, 0.1);
-    background-image: url(../image/wasyoku3.jpg);
+    background-image: url(../image/takahiro-taguchi-mZ2D_re0iLA-unsplash.jpg);
     background-size: cover;
-
     position: relative;
 
     &:before {
@@ -428,7 +380,8 @@ li {
       min-height: 392px;
     }
 
-    .top-history-image {
+  
+    .top-about-image {
 
       width: 120px;
       height: auto;
@@ -441,17 +394,18 @@ li {
         width: 100%;
         height: auto;
       }
+
     }
 
-    .top-history-link {
+    .top-about-link {
       position: absolute;
       top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: inline-block;
-      border: 1px solid #fff;
       width: 200px;
       height: 64px;
+
 
       @include tab {
         display: none;
@@ -461,15 +415,23 @@ li {
         color: #fff;
         font-size: 16px;
         display: block;
+        border: 1px solid #fff;
         width: 100%;
         height: 100%;
         text-align: center;
         line-height: 64px;
+
+        &:hover {
+          background-color: rgba(238, 238, 238, 0.8);
+          color: rgb(0, 0, 0);
+          border: none;
+        }
+
       }
     }
   }
 
-  .top-history-right {
+  .top-about-right {
     position: relative;
     width: 58%;
     background-color: rgba(247, 243, 243, 0.747);
@@ -480,7 +442,7 @@ li {
       width: 100%;
     }
 
-    .top-history-manager {
+    .top-about-manager {
       display: flex;
       align-items: center;
       margin: 0 0 0 auto;
@@ -496,9 +458,9 @@ li {
   }
 }
 
-///////////top-dorayaki////////////
+///////////top-lunch////////////
 
-.top-dorayaki {
+.top-lunch {
   position: relative;
   margin-bottom: 160px;
 
@@ -506,7 +468,7 @@ li {
     margin-bottom: 48px;
   }
 
-  .top-dorayaki-image {
+  .top-lunch-image {
     width: 880px;
     height: 480px;
 
@@ -535,18 +497,18 @@ li {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
   }
 
-  .top-dorayaki-text {
-    width: 800px;
+  .top-lunch-text {
+    width: 680px;
     height: 480px;
     background-color: rgba(247, 243, 243, 0.747);
     position: absolute;
-    right: 7%;
+    right: 2%;
     top: 48px;
-    padding: 7% 8% 7% 96px;
-
+    padding: 7% 8% 7% 120px;
     opacity: 0;
     transform: translateY(96px);
 
@@ -560,7 +522,7 @@ li {
       position: static;
       width: 100%;
       height: auto;
-      padding: 8px;
+      padding: 24px;
 
     }
 
@@ -574,9 +536,8 @@ li {
       margin-bottom: 32px;
     }
 
-    .top-dorayaki-link {
+    .top-lunch-link {
 
-      border: 1px solid rgb(0, 0, 0);
       width: 200px;
       height: 64px;
       margin: 0 auto;
@@ -584,20 +545,28 @@ li {
 
       a {
         color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
         font-size: 14px;
         display: block;
         width: 100%;
         height: 100%;
         text-align: center;
         line-height: 64px;
+
+        &:hover {
+          color: white;
+          border: none;
+          background-color: rgba(134, 134, 134, 0.836);
+
+        }
       }
     }
   }
 }
 
-///////////top-life////////////
+///////////top-dinner////////////
 
-.top-life {
+.top-dinner {
   position: relative;
   margin-bottom: 148px;
 
@@ -607,7 +576,7 @@ li {
 
 
 
-  .top-life-image {
+  .top-dinner-image {
     margin: 0 0 0 auto;
     width: 0;
     height: 480px;
@@ -639,15 +608,16 @@ li {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
   }
 
-  .top-life-text {
-    width: 776px;
+  .top-dinner-text {
+    width: 680px;
     height: 480px;
     background-color: rgba(247, 243, 243, 0.747);
     position: absolute;
-    left: 9%;
+    left: 2%;
     top: 48px;
     padding: 7% 96px 7% 8%;
 
@@ -665,7 +635,7 @@ li {
       position: static;
       width: 100%;
       height: auto;
-      padding: 8px;
+      padding: 24px;
 
     }
 
@@ -679,21 +649,29 @@ li {
       margin-bottom: 32px;
     }
 
-    .top-life-link {
+    .top-dinner-link {
 
-      border: 1px solid rgb(0, 0, 0);
       width: 200px;
       height: 64px;
       margin: 0 auto;
 
       a {
         color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
         font-size: 14px;
         display: block;
         width: 100%;
         height: 100%;
         text-align: center;
         line-height: 64px;
+
+        &:hover {
+          color: white;
+          border: none;
+          background-color: rgba(134, 134, 134, 0.836);
+
+        }
+
       }
     }
   }
@@ -701,33 +679,46 @@ li {
 
 ///////////top-background-show////////////
 .top-background-show {
-  margin-bottom: 148px;
+  margin-bottom: 96px;
 
   @include sp {
     margin-bottom: 80px;
   }
 
   .top-background-show-contents {
-    background-image: url(../image/wasyoku2.jpg);
+    background-image: url(../image/night-view-569625_1920.jpg);
+    background-color: rgba(231, 231, 231, 0.507);
     background-attachment: fixed;
-    height: 480px;
+    height: 320px;
     background-position: center;
     background-size: cover;
+    position: relative;
+
+    &:after {
+      content: '';
+      background-color: rgba(31, 30, 30, 0.707);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
 
     @include tab {
-      background-attachment: local;
-      height: 320px;
+      height: 240px;
     }
 
-    @include sp {
-      margin: 8px;
+    @include sp{
+    display: none;
     }
+
   }
 }
 
 ///////////top-store////////////
 .top-store {
-  margin-bottom: 144px;
+  margin-bottom: 96px;
 
   @include sp {
     margin-bottom: 80px;
@@ -752,6 +743,8 @@ li {
       h2 {
         font-size: 24px;
         font-weight: normal;
+        padding: 0 16px;
+        border-left: 4px solid rgb(114, 114, 114);
       }
 
       a {
@@ -762,7 +755,51 @@ li {
     }
 
     .article-slider {
-      @include store();
+      article {
+        margin: 0 16px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        .store-image-wrap {
+          margin-bottom: 8px;
+
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+            @include tab {
+              height: 240px;
+            }
+          }
+
+        }
+
+
+        h3 {
+          font-size: 20px;
+        }
+
+        .top-store-text {
+          display: flex;
+          font-size: 14px;
+          margin-bottom: 10px;
+          padding: 5px;
+
+          .top-store-text-item1 {
+            width: 30%;
+
+          }
+
+          .top-store-text-item2 {
+            width: 65%;
+
+          }
+        }
+      }
     }
   }
 }
@@ -771,8 +808,9 @@ li {
 
 .top-notice {
 
-  margin-bottom: 144px;
   text-align: left;
+  background-color: rgba(247, 243, 243, 0.747);
+  padding: 40px 0 96px;
 
   @include sp {
     margin-bottom: 80px;
@@ -797,6 +835,9 @@ li {
       h2 {
         font-size: 24px;
         font-weight: normal;
+        padding: 0 16px;
+        border-left: 4px solid rgb(114, 114, 114);
+
       }
 
       a {
@@ -809,7 +850,7 @@ li {
     .article-slider {
 
       article {
-        margin: 0 8px;
+        margin: 0 16px;
 
         &:hover {
           opacity: 0.8;
@@ -820,39 +861,39 @@ li {
 
           img {
             width: 100%;
-            height: auto;
+            height: 200px;
             object-fit: cover;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
+            @include tab {
+              height: 240px;
+            }
           }
+
         }
+      }
 
-        time {
-          font-size: 14px;
-          margin-bottom: 8px;
-          color: rgb(167, 167, 167);
-        }
+      time {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: rgb(167, 167, 167);
+      }
 
-        h3 {
-          margin-bottom: 8px;
-          font-size: 18px;
-        }
+      h3 {
+        margin-bottom: 8px;
+        font-size: 20px;
+      }
 
-        .top-notice-link {
-          display: inline-block;
-          text-align: center;
-          height: 80px;
-
-          a {
-            border: 1px solid darkgrey;
-            border-radius: 3px;
-            display: inline-block;
-            color: darkgrey;
-            padding: 4px 4px;
-          }
+      .top-notice-text {
+        font-size: 14px;
         }
       }
     }
   }
-}
+
+
 
 ///////////footer///////////
 footer {
@@ -936,10 +977,10 @@ footer {
         color: darkgrey;
       }
 
-      .footer-sns i{
+      .footer-sns i {
         font-size: 32px;
         color: rgb(146, 145, 145);
-        
+
       }
     }
   }
