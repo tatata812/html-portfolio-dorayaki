@@ -4,8 +4,12 @@ $(function () {
   $('.main-visial-slider').slick({
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    infinite: true,
+    speed: 1500,
+    cssEase: 'cubic-bezier(.645, .045, .355, 1)',
     fade: true,
+    arrows: true,
+    pauseOnHover: false
   });
 
 
@@ -86,5 +90,7 @@ $(function () {
   });
 
 
+  ///////////// matchHeight////////////
+  $('article').matchHeight();
 
 });

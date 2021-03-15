@@ -288,6 +288,8 @@
 .archive-store .archive-store-inner .archive-store-article-wrap article .store-image-wrap img {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .archive-store .archive-store-inner .archive-store-article-wrap article .top-store-text {
