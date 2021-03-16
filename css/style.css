@@ -642,11 +642,12 @@ li {
 .top-lunch .top-lunch-text h2 {
   font-size: 25px;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .top-lunch .top-lunch-text p {
   font-size: 14px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .top-lunch .top-lunch-text .top-lunch-link {
@@ -757,11 +758,12 @@ li {
 .top-dinner .top-dinner-text h2 {
   font-size: 25px;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .top-dinner .top-dinner-text p {
   font-size: 14px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .top-dinner .top-dinner-text .top-dinner-link {
@@ -851,64 +853,63 @@ li {
   }
 }
 
-.top-store .top-store-inner .top-store-title {
+.top-store .top-store-inner h2 {
+  font-size: 24px;
+  font-weight: normal;
+  padding: 0 16px;
+  border-left: 4px solid #727272;
+  margin-bottom: 48px;
+}
+
+.top-store .top-store-inner .top-store-contents-wrap {
+  margin: 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 48px;
 }
 
-.top-store .top-store-inner .top-store-title h2 {
-  font-size: 24px;
-  font-weight: normal;
+@media (max-width: 776px) {
+  .top-store .top-store-inner .top-store-contents-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.top-store .top-store-inner .top-store-contents-wrap .top-store-content-left {
+  width: 40%;
   padding: 0 16px;
-  border-left: 4px solid #727272;
 }
 
-.top-store .top-store-inner .top-store-title a {
-  font-size: 14px;
-  display: inline-block;
-  border-bottom: 1px solid black;
+@media (max-width: 776px) {
+  .top-store .top-store-inner .top-store-contents-wrap .top-store-content-left {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 0;
+  }
 }
 
-.top-store .top-store-inner .article-slider article {
-  margin: 0 16px;
-}
-
-.top-store .top-store-inner .article-slider article:hover {
-  opacity: 0.8;
-}
-
-.top-store .top-store-inner .article-slider article .store-image-wrap {
-  margin-bottom: 8px;
-}
-
-.top-store .top-store-inner .article-slider article .store-image-wrap img {
+.top-store .top-store-inner .top-store-contents-wrap .top-store-content-left .store-image-wrap img {
   width: 100%;
-  height: 200px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media (max-width: 776px) {
-  .top-store .top-store-inner .article-slider article .store-image-wrap img {
-    height: 240px;
-  }
-}
-
-.top-store .top-store-inner .article-slider article h3 {
+.top-store .top-store-inner .top-store-contents-wrap .top-store-content-left h3 {
   font-size: 20px;
 }
 
-.top-store .top-store-inner .article-slider article .top-store-text {
+.top-store .top-store-inner .top-store-contents-wrap .top-store-content-left .top-store-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -917,12 +918,45 @@ li {
   padding: 5px;
 }
 
-.top-store .top-store-inner .article-slider article .top-store-text .top-store-text-item1 {
+.top-store .top-store-inner .top-store-contents-wrap .top-store-content-left .top-store-text .top-store-text-item1 {
   width: 30%;
 }
 
-.top-store .top-store-inner .article-slider article .top-store-text .top-store-text-item2 {
+.top-store .top-store-inner .top-store-contents-wrap .top-store-content-left .top-store-text .top-store-text-item2 {
   width: 65%;
+}
+
+.top-store .top-store-inner .top-store-contents-wrap .ggmap-wrap {
+  width: 60%;
+  padding: 0 16px;
+}
+
+@media (max-width: 776px) {
+  .top-store .top-store-inner .top-store-contents-wrap .ggmap-wrap {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.top-store .top-store-inner .top-store-contents-wrap .ggmap-wrap .ggmap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.top-store .top-store-inner .top-store-contents-wrap .ggmap-wrap .ggmap iframe,
+.top-store .top-store-inner .top-store-contents-wrap .ggmap-wrap .ggmap object,
+.top-store .top-store-inner .top-store-contents-wrap .ggmap-wrap .ggmap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .top-notice {
