@@ -13,6 +13,7 @@ select {
 
 a {
   color: black;
+  outline: none;
 }
 
 li {

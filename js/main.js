@@ -14,14 +14,28 @@ $(function () {
 
 
   /////////aside-slick//////
-  $('.top-aside-slider').slick({
-    autoplay: true,
+  $('.menu-slick').slick({
     autoplaySpeed: 5000,
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 776,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
+
 
   });
 
