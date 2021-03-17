@@ -6,9 +6,9 @@ $(function () {
     autoplaySpeed: 3000,
     infinite: true,
     speed: 1500,
-    cssEase: 'cubic-bezier(.645, .045, .355, 1)',
+    // cssEase: 'cubic-bezier(.645, .045, .355, 1)',
     fade: true,
-    arrows: true,
+    arrows: false,
     pauseOnHover: false
   });
 
