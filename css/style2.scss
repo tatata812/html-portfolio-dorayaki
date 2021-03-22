@@ -184,9 +184,7 @@
             font-size: 18px;
             text-align: center;
           }
-
         }    
-
       }
     }
 
@@ -199,6 +197,106 @@
     }
   }
 
+////////single-menu////////
+.single-menu {
+
+  .single-menu-inner {
+
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    @include tab {
+      padding: 0 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin: 48px 0 48px 16px;
+      border-bottom: solid 3px #dddddd;
+      position: relative;
+      
+      &:after {
+        position: absolute;
+        content: " ";
+        display: block;
+        border-bottom: solid 3px #8a8a8a;
+        bottom: -3px;
+        width: 100px;
+      }
+
+      @include sp{
+      margin: 40px 0 16px 24px;
+      }
+    }
+
+    .single-menu-contents {
+      display: flex;
+
+      @include tab {
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      .single-menu-image {
+        width: 50%;
+
+        @include tab {
+          width: 90%;
+        }
+
+        img {
+          width: 100%;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;        }
+      }
+
+      .single-menu-text {
+        width: 45%;
+        padding: 40px;
+
+        @include tab {
+          width: 100%;
+        }
+
+        .single-menu-lead {
+          margin-bottom: 40px;
+          font-size: 20px;
+          line-height: 1.5;
+          }
+          
+
+        .single-menu-item {
+
+          display: flex;
+
+          p {
+            margin-bottom: 16px;
+
+            &:first-of-type {
+              color: #999;
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+
+    .single-menu-link {
+      display: block;
+      text-align: right;
+      margin: 50px;
+
+      @include tab {
+        margin: 0 30px 30px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
 
 ////////page-404-main////////
 .page-404-main {
@@ -220,108 +318,11 @@
     max-width: 1140px;
     margin: 0 auto;
 
-
-
     @include tab {
       padding: 0 10px;
     }
 
-    article {
-      margin: 0 10px;
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      .store-image-wrap {
-        margin-bottom: 10px;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      .top-store-text {
-        display: flex;
-        font-size: 14px;
-        margin-bottom: 10px;
-        padding: 5px;
-
-        .top-store-text-item1 {
-          width: 30%;
-
-        }
-
-        .top-store-text-item2 {
-          width: 65%;
-        }
-      }
-    }
-
-
-
-    .home-main-title {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      align-items: center;
-      margin: 150px 0 50px 0;
-
-      @include tab {
-        margin: 50px 0 50px 0;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      h3 {
-        font-size: 20px;
-
-        @include tab {
-          margin-bottom: 10px;
-        }
-      }
-
-      .home-menu-wrap {
-        display: flex;
-
-        @include sp {
-          flex-direction: column;
-        }
-
-
-        .home-category-menu {
-          display: flex;
-
-          @include sp {
-            justify-content: space-between;
-
-          }
-
-          select {
-            margin-left: 15px;
-            font-size: 16px;
-          }
-        }
-
-        .home-archive-menu {
-          display: flex;
-          margin-left: 30px;
-
-          @include sp {
-            margin: 10px 0;
-            justify-content: space-between;
-          }
-
-          select {
-            margin-left: 15px;
-            font-size: 16px;
-          }
-        }
-      }
-    }
-
-    .home-article-warap {
+    .home-article-wrap {
 
       display: flex;
       flex-wrap: wrap;
@@ -344,7 +345,7 @@
         }
 
         .notice-image-wrap {
-          margin-bottom: 10px;
+          margin: 16px;
 
           img {
             width: 100%;
@@ -360,148 +361,20 @@
         h3 {
           margin-bottom: 10px;
         }
-
-        .top-notice-link {
-          display: inline-block;
-          border: 1px solid darkgrey;
-          line-height: 35px;
-          border-radius: 18px;
-          width: 80px;
-          text-align: center;
-
-          a {
-            display: inline-block;
-            color: darkgrey;
-          }
-        }
       }
     }
+@include pager();
+
   }
 }
 
-////////archive-store///////
 
-.archive-store {
-
-  .archive-store-inner {
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-
-    @include tab {
-      padding: 0 10px;
-    }
-
-    .archive-store-title {
-      font-size: 25px;
-      margin: 30px 0 20px;
-    }
-
-    .archive-store-article-wrap {
-
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 50px;
-
-      @include store();
-
-      .archive-store-article {
-
-        width: 23%;
-        margin-bottom: 30px;
-
-        @include tab {
-          width: 47%;
-        }
-
-        @include sp {
-          width: 98%;
-        }
-      }
-    }
-  }
-}
-
-////////archive-store////////
-.archive-store {
-  .archive-store-inner {
-
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-
-    @include tab {
-      padding: 0 10px;
-    }
-
-    h3 {
-      font-size: 24px;
-      margin: 50px 0 20px 10px;
-    }
-
-    .archive-store-contents {
-      display: flex;
-
-      @include tab {
-        flex-direction: column;
-      }
-
-
-      .archive-store-image {
-        width: 50%;
-
-        @include tab {
-          width: 100%;
-        }
-
-        img {
-          width: 100%;
-          padding: 10px;
-        }
-      }
-
-      .archive-store-text {
-        width: 45%;
-        padding: 80px 60px;
-
-        @include tab {
-          width: 100%;
-        }
-
-        .archive-store-item {
-
-          display: flex;
-
-          p {
-            margin-bottom: 10px;
-
-            &:first-of-type {
-              color: #999;
-              width: 40%;
-            }
-          }
-        }
-      }
-    }
-
-    .archive-store-link {
-      display: block;
-      text-align: right;
-      margin: 50px;
-
-      @include tab {
-        margin: 0 30px 30px;
-      }
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
-}
 
 ////////single////////
 .single {
+
+@include style();
+
 
   .single-inner {
 
@@ -519,29 +392,21 @@
       display: inline-block;
     }
 
-    h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
     p {
       margin-bottom: 70px;
     }
 
     .single-link {
+      display: block;
       text-align: right;
-      margin: 0 50px 50px 0;
+      margin: 50px;
 
       @include tab {
-        text-align: center;
-        margin: 0 50px 30px;
+        margin: 0 30px 30px;
       }
 
-      a {
-        border: 1px solid black;
-        display: inline-block;
-        padding: 15px 20px;
-
+      &:hover {
+        opacity: 0.7;
       }
     }
   }

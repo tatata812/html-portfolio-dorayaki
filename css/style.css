@@ -1053,7 +1053,8 @@ li {
 }
 
 footer {
-  margin: 20px 0;
+  padding: 20px 0;
+  background-color: #b9b9b9;
 }
 
 footer .footer-inner {
@@ -1152,11 +1153,11 @@ footer .footer-inner .footer-contents-wrap {
 }
 
 footer .footer-inner .footer-contents-wrap .footer-contents-left {
-  color: darkgrey;
+  color: #ececec;
 }
 
 footer .footer-inner .footer-contents-wrap .footer-sns i {
   font-size: 32px;
-  color: #929191;
+  color: #f0f0f0;
 }
 /*# sourceMappingURL=style.css.map */
