@@ -1,12 +1,11 @@
 $(function () {
 
   /////////メインビジュアルslick//////
-  $('.main-visial-slider').slick({
-    // autoplay: true,
+  $('.main-visual-slider').slick({
+    autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
     speed: 1500,
-    // cssEase: 'cubic-bezier(.645, .045, .355, 1)',
     fade: true,
     arrows: false,
     pauseOnHover: false
@@ -35,8 +34,6 @@ $(function () {
         }
       },
     ]
-
-
   });
 
 
@@ -93,15 +90,15 @@ $(function () {
   ////////////ナビ固定///////////
 
 
-  // $(function () {
-  //   $(window).scroll(function () {
-  //     if ($(this).scrollTop() > 400) {
-  //       $('.header-fixed').addClass('fixed');
-  //     } else {
-  //       $('.header-fixed').removeClass('fixed');
-  //     }
-  //   });
-  // });
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 400) {
+        $('.header-fixed').addClass('fixed');
+      } else {
+        $('.header-fixed').removeClass('fixed');
+      }
+    });
+  });
 
 
   ///////////// matchHeight////////////

@@ -41,10 +41,10 @@ li {
   position: fixed;
   top: 0;
   z-index: 5;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 48px;
   padding: 0 32px 0 24px;
   font-size: 14px;
@@ -82,12 +82,11 @@ li {
   }
 }
 
+////////下層ページヘッダー設定///////
 .sub-page {
   visibility: visible;
   position: relative;
   transform: translateY(0);
-
-
 }
 
 .header-side {
@@ -212,36 +211,25 @@ li {
 ///////////top-visual///////////
 .top-visual {
 
-  .main-visial {
+  .main-visual {
 
-    .main-visial-slider {
+    .slick-slide img {
+      transform: scale(1.2);
+      transition: 1s cubic-bezier(.645, .045, .355, 1);
+    }
 
-      .slick-slide img {
-        transform: scale(1.2);
-        transition: 1s cubic-bezier(.645, .045, .355, 1);
-      }
+    .slick-current img {
+      transform: scale(1);
+    }
 
-      .slick-current img {
-        transform: scale(1);
-      }
 
+    .main-visual-slider {
 
       img {
         width: 100%;
         height: 88vh;
         object-fit: cover;
         filter: saturate(200%);
-
-
-        .slick-slide img {
-          transform: scale(1.2);
-          transition: 1s cubic-bezier(.645, .045, .355, 1);
-        }
-
-        .slick-current img {
-          transform: scale(1);
-        }
-
 
         @include sp {
           height: 480px;
