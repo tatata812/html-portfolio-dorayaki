@@ -2,7 +2,7 @@ $(function () {
 
   /////////メインビジュアルslick//////
   $('.main-visial-slider').slick({
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
     speed: 1500,
@@ -47,7 +47,7 @@ $(function () {
     autoplay: false,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 776,
@@ -93,15 +93,15 @@ $(function () {
   ////////////ナビ固定///////////
 
 
-  $(function () {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 400) {
-        $('.header-fixed').addClass('fixed');
-      } else {
-        $('.header-fixed').removeClass('fixed');
-      }
-    });
-  });
+  // $(function () {
+  //   $(window).scroll(function () {
+  //     if ($(this).scrollTop() > 400) {
+  //       $('.header-fixed').addClass('fixed');
+  //     } else {
+  //       $('.header-fixed').removeClass('fixed');
+  //     }
+  //   });
+  // });
 
 
   ///////////// matchHeight////////////
